@@ -1,0 +1,38 @@
+______
+     /
+   /
+ /
+/______
+The humans.txt file explains the team, technology,
+and graphic assets behind this site humanstxt.org.
+
+_______________________________________________________________________________
+
+Developer
+Ziya Mammadov
+Hand crafted design & web development
+
+Design tools:
+Figma
+Photoshop
+Blender
+
+twitter.com/zmmmdf
+github.com/zmmmdf
+
+_______________________________________________________________________________
+
+TECHNOLOGY
+
+React
+Remix
+Three.js
+Framer Motion
+
+_______________________________________________________________________________
+
+FONTS
+
+Gotham
+IPA Gothic Regular
+Hiragino Kaku Gothic W8
