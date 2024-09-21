@@ -104,7 +104,7 @@ export const Home = () => {
         title="Open Source Infrastructure for Online Education"
         description="Easily launch edtech platforms like Duolingo, Brilliant, Udemy and more use cases in online education  - all without building from scratch."
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="/projects/eskooly"
         model={{
           type: 'laptop',
           alt: 'Open Source Infrastructure for Online Education',

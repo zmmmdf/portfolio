@@ -63,7 +63,7 @@ import {
 import { baseMeta } from '~/utils/meta';
 import { Suspense, lazy, useMemo } from 'react';
 import { media } from '~/utils/style';
-import styles from './smart-sparrow.module.css';
+import styles from './eskooly.module.css';
 
 const Earth = lazy(() => import('./earth').then(module => ({ default: module.Earth })));
 const EarthSection = lazy(() =>
@@ -451,7 +451,7 @@ export const SmartSparrow = () => {
               
               <ProjectSectionHeading>Project outcomes</ProjectSectionHeading>
               <ProjectSectionText>
-              Join our waiting list and let Kalvi boost 
+              Join our waiting list and let eSkooly boost 
               your productivity! We're dedicated to 
               bringing more schools online, faster.
                 {' '}

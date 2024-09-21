@@ -141,17 +141,6 @@ export const Navbar = () => {
 
   return (
     <header className={styles.navbar} ref={headerRef}>
-      <RouterLink
-        unstable_viewTransition
-        prefetch="intent"
-        to={location.pathname === '/' ? '/#intro' : '/'}
-        data-navbar-item
-        className={styles.logo}
-        aria-label={`${config.name}, ${config.role}`}
-        onClick={handleMobileNavClick}
-      >
-        <Monogram highlight />
-      </RouterLink>
       <NavToggle onClick={() => setMenuOpen(!menuOpen)} menuOpen={menuOpen} />
       <nav className={styles.nav}>
         <div className={styles.navList}>
