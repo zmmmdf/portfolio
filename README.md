@@ -5,7 +5,7 @@
 
 [![Site preview](/public/site-preview.png)](https://hamishw.com)
 
-My design portfolio to showcase a few projects. Built with [Remix](https://remix.run/), [Three.js](https://threejs.org/), and [Framer Motion](https://www.framer.com/motion/). View the [live site](https://zmmmdf.com).
+My portfolio to showcase a few projects. Built with [Remix](https://remix.run/), [Three.js](https://threejs.org/), and [Framer Motion](https://www.framer.com/motion/). View the [live site](https://zmmmdf.com).
 ## Install & run
 
 Make sure you have nodejs `19.9.0` or higher and npm `9.6.3` or higher installed. Install dependencies with:
