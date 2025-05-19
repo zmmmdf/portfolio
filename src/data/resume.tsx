@@ -15,9 +15,11 @@ export const DATA = {
   skills: [
     "Python",
     "C++",
-    "C#",
+    "AI & ML (Beginner)",
     "FORTRAN",
-    "MATLAB",
+    "Web developing",
+    "Embed systems",
+    "Competitive Programming",
     "Problem Solving",
     "Analytical Thinking",
     "Teamwork",
@@ -44,13 +46,6 @@ export const DATA = {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/mziya/",
         icon: Icons.linkedin,
-
-        navbar: true,
-      },
-      X: {
-        name: "X",
-        url: "https://x.com/zmmmdf",
-        icon: Icons.x,
 
         navbar: true,
       },
@@ -148,13 +143,7 @@ export const DATA = {
         "Developed a mock of Windows 11 with interesting notifications and functionality",
       image:
         "https://steam.edu.az/storage/slider_widget/nMUtp5hXRvdAaSwqIr0Synh1mSVEnlhmR1YQXm28.svg",
-      links: [
-      //   {
-      //     title: "Source",
-      //     icon: <Icons.github className="h-4 w-4" />,
-      //     href: "https://github.com/justinmichaud/TerribleHacks2016-Windows11",
-      //   },
-      ],
+      links: [],
     },
   ],
 } as const;
