@@ -48,6 +48,13 @@ export const DATA = {
         icon: Icons.linkedin,
 
         navbar: true,
+      },      
+      X: {
+        name: "X",
+        url: "https://dub.sh/dillion-twitter",
+        icon: Icons.x,
+
+        navbar: true,
       },
       Youtube: {
         name: "Youtube",
