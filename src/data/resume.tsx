@@ -52,7 +52,7 @@ export const DATA = {
       Signal: {
         name: "Signal",
         url: "https://signal.me/#p/+9940105150524r",
-        icon: Icons.signal,
+        icon: Icons.X,
 
         navbar: true,
       },
