@@ -49,10 +49,10 @@ export const DATA = {
 
         navbar: true,
       },      
-      X: {
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
+      Signal: {
+        name: "Signal",
+        url: "https://signal.me/#p/+9940105150524r",
+        icon: Icons.signal,
 
         navbar: true,
       },
