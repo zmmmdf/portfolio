@@ -1,0 +1,119 @@
+---
+title: "SQL proqramlaşdırma dili"
+publishedAt: "2025-07-14"
+summary: "SQL — məlumat bazaları ilə işləmək üçün istifadə olunan strukturlaşdırılmış sorğu dilidir. Bu yazıda SQL-in əsas anlayışları, praktiki tətbiqi və kod nümunələri izah olunur."
+---
+
+**SQL** (*Structured Query Language*) — əlaqəli məlumat bazaları ilə qarşılıqlı əlaqə qurmaq üçün istifadə olunan **standart proqramlaşdırma dilidir**. 1970-ci illərdə IBM tərəfindən yaradılmış və bu günə qədər bir çox **verilənlər bazası idarəetmə sistemində** (DBMS) tətbiq olunur:  
+**MySQL**, **PostgreSQL**, **SQLite**, **Oracle**, **SQL Server** və digərləri. </br>
+Yazıya əlavə olaraq 60 saniyəlik videoya da bax: [📺 SQL videoya keçid](youtube-link)
+
+---
+
+## 💡 SQL nə üçün istifadə olunur?
+
+SQL vasitəsilə verilənlər bazasında:
+
+- Yeni məlumatlar **əlavə etmək** (INSERT)  
+- Mövcud məlumatları **oxumaq və axtarmaq** (SELECT)  
+- Məlumatları **yeniləmək** (UPDATE)  
+- Artıq lazım olmayan məlumatları **silmək** (DELETE)  
+- Cədvəllər yaratmaq və əlaqələr qurmaq (CREATE, ALTER)  
+- İstifadəçi icazələrini idarə etmək (GRANT, REVOKE)
+
+mümkündür.
+
+Bu əməliyyatlar adətən **CRUD** olaraq qısaldılır:  
+**Create**, **Read**, **Update**, **Delete**.
+
+---
+
+## 🧱 Əsas anlayışlar
+
+### 1. **Table (Cədvəl)**  
+Məlumatlar satırlar (rows) və sütunlar (columns) şəklində saxlanılır. Hər cədvəl müəyyən bir məlumat növünü təmsil edir (məsələn, `Users` cədvəli istifadəçi məlumatlarını saxlayır).
+
+### 2. **Primary Key**  
+Cədvəldəki hər bir sətrin **unikal identifikatoru**. Bu, duplikatların qarşısını alır.
+
+### 3. **Foreign Key**  
+İki cədvəl arasında əlaqə yaradan açardır. Beləliklə, normalizasiya və məlumatların təkrar olunmasının qarşısı alınır.
+
+### 4. **Query**  
+SQL-də verilən **sorğu əmridir**. Məlumat əldə etmək və ya dəyişmək üçün istifadə olunur.
+![sql explaining table](../public/sql_table.png)
+
+---
+
+## 🧪 Real kod nümunələri
+
+Aşağıdakı nümunə bir `Users` və `Posts` cədvəli yaradaraq onların arasında əlaqə qurur.
+
+```sql
+-- Users cədvəlinin yaradılması
+CREATE TABLE Users (
+  id INT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100) UNIQUE
+);
+
+-- Posts cədvəlinin yaradılması və Users ilə əlaqələndirilməsi
+CREATE TABLE Posts (
+  id INT PRIMARY KEY,
+  user_id INT,
+  title VARCHAR(200),
+  content TEXT,
+  FOREIGN KEY (user_id) REFERENCES Users(id)
+);
+````
+
+### ✅ Məlumat əlavə etmək
+
+```sql
+INSERT INTO Users (id, name, email)
+VALUES (1, 'Ziya Məmmədov', 'ziya@example.com');
+```
+
+### 🔍 Məlumatı axtarmaq (SELECT)
+
+```sql
+-- Bütün istifadəçiləri siyahıla
+SELECT * FROM Users;
+
+-- Ziya adlı istifadəçini tap
+SELECT * FROM Users WHERE name = 'Ziya Məmmədov';
+```
+
+### 🔗 Cədvəlləri birləşdirmək (JOIN)
+
+```sql
+-- İstifadəçilərin postlarını göstər
+SELECT Users.name, Posts.title
+FROM Users
+JOIN Posts ON Users.id = Posts.user_id;
+```
+
+---
+
+## 🚀 SQL-in üstünlükləri
+
+✅ **Deklarativdir** – “Nə istədiyini” yazırsan, “Necə alınacağını” sistem özü qərar verir
+✅ **Standartlaşdırılıb** – Əksər verilənlər bazalarında oxşar sintaksis
+✅ **Performans və optimizasiya** – Sorgular indekslərlə sürətləndirilə bilir
+✅ **Veri bütövlüyü və təhlükəsizlik** – ASID prinsipləri ilə işləyir
+
+---
+
+## 🔚 Nəticə
+
+SQL — yalnızca bir proqramlaşdırma dili deyil, **məlumatla işləyən hər bir mütəxəssisin bilməli olduğu əsas bacarıqdır**. İstər proqramçı, istər analitik, istərsə də data engineer olasan — SQL sənin “məlumatla danışma” vasitəndir.
+
+> 🎓 Gələcək yazılarda SQL-in optimizasiya metodları, alt-sorğular və performans təhlili haqqında danışacağıq.
+
+---
+
+Əgər bu yazı sənin üçün faydalı oldusa, paylaş və fikirlərini bölüş!
+
+
+Hazırlayım?
+```
