@@ -10,7 +10,7 @@ image: "/sql-table.png"
 Yazıya əlavə olaraq 60 saniyəlik videoya da bax: [📺 SQL videoya keçid](youtube-link)
 
 
-## 💡 SQL nə üçün istifadə olunur?
+## SQL nə üçün istifadə olunur?
 
 SQL vasitəsilə verilənlər bazasında:
 
@@ -27,7 +27,7 @@ Bu əməliyyatlar adətən **CRUD** olaraq qısaldılır:
 **Create**, **Read**, **Update**, **Delete**.
 
 
-## 🧱 Əsas anlayışlar
+## Əsas anlayışlar
 
 ### 1. **Table (Cədvəl)**  
 Məlumatlar satırlar (rows) və sütunlar (columns) şəklində saxlanılır. Hər cədvəl müəyyən bir məlumat növünü təmsil edir (məsələn, `Users` cədvəli istifadəçi məlumatlarını saxlayır).
@@ -42,7 +42,7 @@ Cədvəldəki hər bir sətrin **unikal identifikatoru**. Bu, duplikatların qar
 SQL-də verilən **sorğu əmridir**. Məlumat əldə etmək və ya dəyişmək üçün istifadə olunur.
 
 
-## 🧪 Real kod nümunələri
+## Real kod nümunələri
 
 Aşağıdakı nümunə bir `Users` və `Posts` cədvəli yaradaraq onların arasında əlaqə qurur.
 
@@ -64,7 +64,7 @@ CREATE TABLE Posts (
 );
 ````
 
-### ✅ Məlumat əlavə etmək
+### Məlumat əlavə etmək
 
 ```sql
 INSERT INTO Users (id, name, email)
@@ -91,7 +91,7 @@ JOIN Posts ON Users.id = Posts.user_id;
 ```
 
 
-## 🚀 SQL-in üstünlükləri
+## SQL-in üstünlükləri
 
 ✅ **Deklarativdir** – “Nə istədiyini” yazırsan, “Necə alınacağını” sistem özü qərar verir
 ✅ **Standartlaşdırılıb** – Əksər verilənlər bazalarında oxşar sintaksis
