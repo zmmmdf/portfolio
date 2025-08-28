@@ -92,7 +92,7 @@ export const DATA = {
       school: "University of Edinburgh",
       href: "https://www.ed.ac.uk/",
       degree: "Artificial Intelligience and Computer Science",
-      logoUrl: "/edinburghuniversity.jpg",
+      logoUrl: "/edinburghuniversity.svg",
       start: "2025",
       end: "2029",
     },{
