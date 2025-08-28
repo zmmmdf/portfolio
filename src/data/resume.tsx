@@ -8,14 +8,15 @@ export const DATA = {
   location: "Baku, Azerbaijan",
   locationLink: "https://www.google.com/maps/place/baku",
   description:
-    "Senior High School Student. I love building things and helping people. Active on media.",
+    "AI & Computer Science Student | Passionate About Innovation and Technology | Active on media.",
   summary:
-    "High school student skilled in analytical thinking and problem solving. I have experience in a variety of programming languages and technologies, and I am always looking to learn more. I am passionate about building things that make a difference in people's lives.",
+    "Developer skilled in designing, developing, and maintaining software applications. Proficient in multiple programming languages, debugging, and collaborating with teams. Strong problem-solving abilities and attention to detail, excelling in fast-paced environments.",
   avatarUrl: "/me.jpg",
   skills: [
     "Python",
     "C++",
     "AI & ML (Beginner)",
+    "Haskell",
     "FORTRAN",
     "Web developing",
     "Embed systems",
@@ -88,6 +89,13 @@ export const DATA = {
   ],
   education: [
     {
+      school: "University of Edinburgh",
+      href: "https://www.ed.ac.uk/",
+      degree: "Artificial Intelligience and Computer Science",
+      logoUrl: "/edinburghuniversity.jpg",
+      start: "2025",
+      end: "2029",
+    },{
       school: "Republican Humanitarian Gymnasium named after S.C. Pishavari",
       href: "https://pisheverihfg.edu.az/",
       degree: "High school",
