@@ -122,7 +122,7 @@ export const DATA = {
       end: "2029",
     },{
       school: "Republican Humanitarian Gymnasium",
-      href: "https://pisheverihfg.edu.az/",
+      href: "https://pisheverihfg.edu.az/index.html",
       degree: "High school",
       logoUrl: "/piseveri.jpg",
       start: "2023",
