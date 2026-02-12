@@ -4,29 +4,54 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Ziya Mammadov",
   initials: "ZM",
-  url: "https://mziya.xyz",
-  location: "Baku, Azerbaijan",
-  locationLink: "https://www.google.com/maps/place/baku",
+  url: "https://ziyamammadov.me",
+  location: "Edinburgh, UK",
+  locationLink: "https://www.google.com/maps/place/edinburgh",
   description:
-    "AI & Computer Science Student | Passionate About Innovation and Technology | Active on media.",
+    "AI & Computer Science Student @ University of Edinburgh | i love coding, AI for Bio, hci, cognitive AI.",
   summary:
-    "Developer skilled in designing, developing, and maintaining software applications. Proficient in multiple programming languages, debugging, and collaborating with teams. Strong problem-solving abilities and attention to detail, excelling in fast-paced environments.",
+    "Worked on C#/ASP .NET systems in production, published PyPI libraries with 5000+ downloads, and released Hugging Face datasets for low-resource language NLP. Comfortable pairing, writing tests, and documenting decisions; thrive in fast-moving teams. Strong problem-solving abilities and attention to detail, excelling in fast-paced environments.",
   avatarUrl: "/me.jpg",
   skills: [
     "Python",
     "C++",
-    "AI & ML (Beginner)",
+    "Java",
     "Haskell",
     "FORTRAN",
-    "Web developing",
-    "Embed systems",
+    "JavaScript",
+    "TypeScript",
+  
+    "Machine Learning",
+    "Artificial Intelligence",
+    "Data Analysis",
+  
+    "Full-Stack Development",
+    "Backend Development",
+    "API Development",
+    "Database Design",
+  
+    "High-Performance Computing",
+    "Numerical Computing",
+    "Embedded Systems",
+    "Linux",
+    "Shell Scripting",
+  
+    "Data Structures & Algorithms",
     "Competitive Programming",
     "Problem Solving",
+  
+    "Git",
+    "GitHub",
+    "Docker",
+    "CI/CD",
+    "Cloud Deployment",
+    "Vibe Coding",
+  
     "Analytical Thinking",
     "Teamwork",
-    "Negotiation",
-    "Docker",
-    "Git",
+    "Leadership",
+    "Communication",
+    "Negotiation"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -59,7 +84,7 @@ export const DATA = {
       },
       Youtube: {
         name: "Youtube",
-        url: "https://youtube.com/@zmmmdf",
+        url: "https://www.youtube.com/@ziyamamadov",
         icon: Icons.youtube,
         navbar: true,
       },
