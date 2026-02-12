@@ -84,7 +84,7 @@ export const DATA = {
       start: "Aug 2024",
       end: "Oct 2024",
       description:
-        "Intern at MPAY specializing in ASP.NET MVC and ASP.NET development, contributing to innovative solutions in the fintech sector.",
+        "Implemented production ASP .NET MVC features and REST APIs used by real users. Added integration tests and contributed to CI pipelines. Wrote incident reports and documentation, supporting documentation stability. Collaborated via Git/GitLab, contributing team workflows",    
     },
   ],
   education: [
@@ -96,7 +96,7 @@ export const DATA = {
       start: "2025",
       end: "2029",
     },{
-      school: "Republican Humanitarian Gymnasium named after S.C. Pishavari",
+      school: "Republican Humanitarian Gymnasium",
       href: "https://pisheverihfg.edu.az/",
       degree: "High school",
       logoUrl: "/piseveri.jpg",
@@ -106,21 +106,23 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Serenify",
-      href: "https://serenify.mziya.xyz",
-      dates: "September 2024 - Jan 2025",
+      title: "Azfar-Demo",
+      href: "https://azfar-demo.ziyamammadov.me/",
+      dates: "Dec 2025 - U/C",
       active: true,
       description:
         "",
       technologies: [
-        "Next.js",
-        "Python",
-        "HTML",
+        "TypeScript",
+        "Vite",
+        "React",
+        "shadcn-ui",
+        "Tailwind CSS"
       ],
       links: [
         {
           type: "Website",
-          href: "https://serenify.mziya.xyz",
+          href: "https://azfar-demo.ziyamammadov.me/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
