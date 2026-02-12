@@ -11,7 +11,7 @@ export const DATA = {
     "AI & Computer Science Student @ University of Edinburgh | i love coding, AI for Bio, hci, cognitive AI.",
   summary:
     "Worked on C#/ASP .NET systems in production, published PyPI libraries with 5000+ downloads, and released Hugging Face datasets for low-resource language NLP. Comfortable pairing, writing tests, and documenting decisions; thrive in fast-moving teams. Strong problem-solving abilities and attention to detail, excelling in fast-paced environments.",
-  avatarUrl: "/me.jpg",
+  avatarUrl: "https://github.com/zmmmdf.png",
   skills: [
     "Python",
     "C++",
