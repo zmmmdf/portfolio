@@ -131,30 +131,6 @@ export const DATA = {
     }
   ],
   projects: [
-    {
-      title: "Azfar-Demo",
-      href: "https://azfar-demo.ziyamammadov.me/",
-      dates: "Dec 2025 - Present",
-      active: true,
-      description:
-        "A demo app for Azfar, featuring a modern UI built with React, Vite, and shadcn/ui.",
-      technologies: [
-        "TypeScript",
-        "Vite",
-        "React",
-        "shadcn-ui",
-        "Tailwind CSS"
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://azfar-demo.ziyamammadov.me/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    }
   ],
   hackathons: [
     {
