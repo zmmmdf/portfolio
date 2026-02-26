@@ -147,9 +147,9 @@ export default async function Page() {
                   Check out my latest work
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
+                  I&apos;ve worked on projects spanning full-stack web apps,
+                  AI/ML pipelines, and PyPI libraries with 5000+ downloads.
+                  Here are some highlights.
                 </p>
               </div>
             </div>
@@ -188,11 +188,9 @@ export default async function Page() {
                   I like building things
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my time in school, I attended 10+ hackathons. People from around the
-                  country would come together and build incredible things in 1-2
-                  days. It was eye-opening to see the endless possibilities
-                  brought to life by a group of motivated and passionate
-                  individuals.
+                  I&apos;ve competed in several hackathons — building everything
+                  from AR bedtime story apps for children to campus event
+                  platforms. Fast constraints, real teams, and shipped products.
                 </p>
               </div>
             </div>
@@ -229,14 +227,21 @@ export default async function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
+                Want to chat? Reach me on{" "}
                 <Link
                   href={DATA.contact.social.Signal.url}
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on Signal
-                </Link>{" "}
-                and I&apos;ll respond whenever I can.
+                  Signal
+                </Link>
+                {" "}or drop me an{" "}
+                <Link
+                  href={`mailto:${DATA.contact.email}`}
+                  className="text-blue-500 hover:underline"
+                >
+                  email
+                </Link>
+                {" "}— I&apos;ll respond whenever I can.
               </p>
             </div>
           </BlurFade>

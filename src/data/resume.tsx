@@ -60,7 +60,7 @@ export const DATA = {
   ],
   contact: {
     email: "ziyamm08@gmail.com",
-    tel: "+9940105150524",
+    tel: "",
     social: {
       GitHub: {
         name: "GitHub",
@@ -78,7 +78,7 @@ export const DATA = {
       },
       Signal: {
         name: "Signal",
-        url: "https://signal.me/#p/+9940105150524r",
+        url: "https://signal.me/#p/+9940105150524",
         icon: Icons.email,
 
         navbar: true,
@@ -117,7 +117,7 @@ export const DATA = {
     {
       school: "University of Edinburgh",
       href: "https://www.ed.ac.uk/",
-      degree: "Artificial Intelligience and Computer Science",
+      degree: "Artificial Intelligence and Computer Science",
       logoUrl: "/edinburghuniversity.svg",
       start: "2025",
       end: "2029",
@@ -134,10 +134,10 @@ export const DATA = {
     {
       title: "Azfar-Demo",
       href: "https://azfar-demo.ziyamammadov.me/",
-      dates: "Dec 2025 - U/C",
+      dates: "Dec 2025 - Present",
       active: true,
       description:
-        "",
+        "A demo app for Azfar, featuring a modern UI built with React, Vite, and shadcn/ui.",
       technologies: [
         "TypeScript",
         "Vite",
