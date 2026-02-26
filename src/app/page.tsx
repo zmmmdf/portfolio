@@ -9,9 +9,31 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
+import { getPortfolioProjects, GitHubProject } from "@/lib/github";
+import { Icons } from "@/components/icons";
+
 const BLUR_FADE_DELAY = 0.04;
 
-export default function Page() {
+export default async function Page() {
+  const portfolioUrl = DATA.portfolioUrl;
+  let portfolioProjects: GitHubProject[] | any[] = [];
+
+  if (portfolioUrl) {
+    portfolioProjects = await getPortfolioProjects(portfolioUrl);
+
+    // Add GitHub and Website icons back since they couldn't be serialized effectively
+    portfolioProjects = portfolioProjects.map(project => ({
+      ...project,
+      links: project.links.map((link: any) => ({
+        ...link,
+        icon: link.type === "Source" ? <Icons.github className="size-3" /> : <Icons.globe className="size-3" />,
+      }))
+    }));
+  }
+
+  // Fallback to DATA.projects if scraping fails or returns nothing
+  const projectsToRender = portfolioProjects.length > 0 ? portfolioProjects : DATA.projects;
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -102,12 +124,14 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
+          <div className="relative [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]">
+            <div className="flex flex-wrap gap-1 overflow-y-auto max-h-[150px] pt-1 pb-8">
+              {DATA.skills.map((skill, id) => (
+                <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                  <Badge key={skill}>{skill}</Badge>
+                </BlurFade>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -131,7 +155,7 @@ export default function Page() {
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
+            {projectsToRender.map((project, id) => (
               <BlurFade
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}

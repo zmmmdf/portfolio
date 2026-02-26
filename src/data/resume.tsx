@@ -5,6 +5,7 @@ export const DATA = {
   name: "Ziya Mammadov",
   initials: "ZM",
   url: "https://ziyamammadov.me",
+  portfolioUrl: "https://github.com/stars/zmmmdf/lists/portfolio",
   location: "Edinburgh, UK",
   locationLink: "https://www.google.com/maps/place/edinburgh",
   description:
@@ -20,33 +21,33 @@ export const DATA = {
     "FORTRAN",
     "JavaScript",
     "TypeScript",
-  
+
     "Machine Learning",
     "Artificial Intelligence",
     "Data Analysis",
-  
+
     "Full-Stack Development",
     "Backend Development",
     "API Development",
     "Database Design",
-  
+
     "High-Performance Computing",
     "Numerical Computing",
     "Embedded Systems",
     "Linux",
     "Shell Scripting",
-  
+
     "Data Structures & Algorithms",
     "Competitive Programming",
     "Problem Solving",
-  
+
     "Git",
     "GitHub",
     "Docker",
     "CI/CD",
     "Cloud Deployment",
     "Vibe Coding",
-  
+
     "Analytical Thinking",
     "Teamwork",
     "Leadership",
@@ -74,7 +75,7 @@ export const DATA = {
         icon: Icons.linkedin,
 
         navbar: true,
-      },      
+      },
       Signal: {
         name: "Signal",
         url: "https://signal.me/#p/+9940105150524r",
@@ -109,7 +110,7 @@ export const DATA = {
       start: "Aug 2024",
       end: "Oct 2024",
       description:
-        "Implemented production ASP .NET MVC features and REST APIs used by real users. Added integration tests and contributed to CI pipelines. Wrote incident reports and documentation, supporting documentation stability. Collaborated via Git/GitLab, contributing team workflows",    
+        "Implemented production ASP .NET MVC features and REST APIs used by real users. Added integration tests and contributed to CI pipelines. Wrote incident reports and documentation, supporting documentation stability. Collaborated via Git/GitLab, contributing team workflows",
     },
   ],
   education: [
@@ -120,7 +121,7 @@ export const DATA = {
       logoUrl: "/edinburghuniversity.svg",
       start: "2025",
       end: "2029",
-    },{
+    }, {
       school: "Republican Humanitarian Gymnasium",
       href: "https://pisheverihfg.edu.az/index.html",
       degree: "High school",
@@ -152,7 +153,8 @@ export const DATA = {
         },
       ],
       image: "",
-      video:"",    }
+      video: "",
+    }
   ],
   hackathons: [
     {
@@ -162,8 +164,7 @@ export const DATA = {
       description:
         "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
       image:
-        "https://fllazerbaijan.org/fll.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+        "https://fll.steam.edu.az/front_assets/img/logo_1.svg",
       links: [],
     },
     {
@@ -173,8 +174,7 @@ export const DATA = {
       description:
         "Developed a mobile application which delivers university campus wide events in real time to all students.",
       image:
-        "https://kaspiliseyi.az/uploads/63970856a7000fb6d876e09207e48b15dc7011e674c6e.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+        "https://kaspiliseyi.edu.az/uploads/63970856a7000fb6d876e09207e48b15dc7011e674c6e.png",
       links: [],
     },
     {
