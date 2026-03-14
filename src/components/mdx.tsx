@@ -64,13 +64,10 @@ function createHeading(level: number) {
     return React.createElement(
       `h${level}`,
       { id: slug },
-      [
-        React.createElement("a", {
-          href: `#${slug}`,
-          key: `link-${slug}`,
-          className: "anchor",
-        }),
-      ],
+      React.createElement("a", {
+        href: `#${slug}`,
+        className: "anchor",
+      }),
       children
     );
   };

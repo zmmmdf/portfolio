@@ -82,7 +82,6 @@ export default async function Page() {
               delay={BLUR_FADE_DELAY * 6 + id * 0.05}
             >
               <ResumeCard
-                key={work.company}
                 logoUrl={work.logoUrl}
                 altText={work.company}
                 title={work.company}
@@ -107,7 +106,6 @@ export default async function Page() {
               delay={BLUR_FADE_DELAY * 8 + id * 0.05}
             >
               <ResumeCard
-                key={education.school}
                 href={education.href}
                 logoUrl={education.logoUrl}
                 altText={education.school}
@@ -128,7 +126,7 @@ export default async function Page() {
             <div className="flex flex-wrap gap-1 overflow-y-auto max-h-[150px] pt-1 pb-8">
               {DATA.skills.map((skill, id) => (
                 <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                  <Badge key={skill}>{skill}</Badge>
+                <Badge key={skill}>{skill}</Badge>
                 </BlurFade>
               ))}
             </div>
