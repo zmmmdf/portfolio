@@ -126,7 +126,7 @@ export default async function Page() {
             <div className="flex flex-wrap gap-1 overflow-y-auto max-h-[150px] pt-1 pb-8">
               {DATA.skills.map((skill, id) => (
                 <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+                  <Badge>{skill}</Badge>
                 </BlurFade>
               ))}
             </div>
@@ -160,7 +160,6 @@ export default async function Page() {
               >
                 <ProjectCard
                   href={project.href}
-                  key={project.title}
                   title={project.title}
                   description={project.description}
                   dates={project.dates}
