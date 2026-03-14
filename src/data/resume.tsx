@@ -5,14 +5,14 @@ export const DATA = {
   name: "Ziya Mammadov",
   initials: "ZM",
   url: "https://ziyamammadov.me",
-  portfolioUrl: "https://github.com/stars/zmmmdf/lists/portfolio",
+  portfolioUrl: "https://github.com/stars/mammadovziya/lists/portfolio",
   location: "Edinburgh, UK",
   locationLink: "https://www.google.com/maps/place/edinburgh",
   description:
     "AI & Computer Science Student @ University of Edinburgh | i love coding, AI for Bio, hci, cognitive AI.",
   summary:
     "Worked on C#/ASP .NET systems in production, published PyPI libraries with 5000+ downloads, and released Hugging Face datasets for low-resource language NLP. Comfortable pairing, writing tests, and documenting decisions; thrive in fast-moving teams. Strong problem-solving abilities and attention to detail, excelling in fast-paced environments.",
-  avatarUrl: "https://github.com/zmmmdf.png",
+  avatarUrl: "https://avatars.githubusercontent.com/u/151031540?v=4",
   skills: [
     "Python",
     "C++",
@@ -64,7 +64,7 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/zmmmdf",
+        url: "https://github.com/mammadovziya",
         icon: Icons.github,
 
         navbar: true,
