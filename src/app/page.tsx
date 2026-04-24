@@ -31,8 +31,9 @@ export default async function Page() {
     }));
   }
 
-  // Fallback to DATA.projects if scraping fails or returns nothing
-  const projectsToRender = portfolioProjects.length > 0 ? portfolioProjects : DATA.projects;
+  // Prefer curated DATA.projects; fall back to scraped GitHub portfolio list.
+  const projectsToRender =
+    DATA.projects.length > 0 ? DATA.projects : portfolioProjects;
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
@@ -112,6 +113,36 @@ export default async function Page() {
                 title={education.school}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
+                description={
+                  "description" in education ? education.description : undefined
+                }
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+      <section id="awards">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 8.5}>
+            <h2 className="text-xl font-bold">Awards</h2>
+          </BlurFade>
+          {DATA.awards.map((award, id) => (
+            <BlurFade
+              key={award.title}
+              delay={BLUR_FADE_DELAY * 8.75 + id * 0.05}
+            >
+              <ResumeCard
+                href={award.href || undefined}
+                logoUrl={award.logoUrl}
+                altText={award.title}
+                title={award.title}
+                subtitle={award.issuer}
+                period={
+                  award.start === award.end
+                    ? award.start
+                    : `${award.start} - ${award.end}`
+                }
+                description={award.description}
               />
             </BlurFade>
           ))}
@@ -145,9 +176,9 @@ export default async function Page() {
                   Check out my latest work
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on projects spanning full-stack web apps,
-                  AI/ML pipelines, and PyPI libraries with 5000+ downloads.
-                  Here are some highlights.
+                  I&apos;ve worked on projects spanning agentic AI, LLM-powered
+                  developer tools, AI-for-bio research software, and PyPI
+                  libraries with 6,000+ downloads. Here are some highlights.
                 </p>
               </div>
             </div>
@@ -211,6 +242,29 @@ export default async function Page() {
               ))}
             </ul>
           </BlurFade>
+        </div>
+      </section>
+      <section id="volunteer">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 15.5}>
+            <h2 className="text-xl font-bold">Volunteer</h2>
+          </BlurFade>
+          {DATA.volunteer.map((v, id) => (
+            <BlurFade
+              key={v.organization + v.title}
+              delay={BLUR_FADE_DELAY * 15.75 + id * 0.05}
+            >
+              <ResumeCard
+                href={v.href || undefined}
+                logoUrl={v.logoUrl}
+                altText={v.organization}
+                title={v.organization}
+                subtitle={v.title}
+                period={`${v.start} - ${v.end}`}
+                description={v.description}
+              />
+            </BlurFade>
+          ))}
         </div>
       </section>
       <section id="contact">
