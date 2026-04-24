@@ -35,6 +35,23 @@ export default async function Page() {
   const projectsToRender =
     DATA.projects.length > 0 ? DATA.projects : portfolioProjects;
 
+  // Group projects by category when curated data is in use; otherwise render flat.
+  type AnyProject = any;
+  const projectGroups: { name: string | null; projects: AnyProject[] }[] =
+    (() => {
+      const src = projectsToRender as AnyProject[];
+      const hasCategories =
+        src.length > 0 && typeof src[0]?.category === "string";
+      if (!hasCategories) return [{ name: null, projects: src }];
+      const buckets = new Map<string, AnyProject[]>();
+      for (const p of src) {
+        const cat: string = p.category || "Other";
+        if (!buckets.has(cat)) buckets.set(cat, []);
+        buckets.get(cat)!.push(p);
+      }
+      return Array.from(buckets, ([name, projects]) => ({ name, projects }));
+    })();
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -165,41 +182,81 @@ export default async function Page() {
         </div>
       </section>
       <section id="projects">
-        <div className="space-y-12 w-full py-12">
+        <div className="space-y-10 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
+                  Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
+                  What I&apos;ve been building
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on projects spanning agentic AI, LLM-powered
-                  developer tools, AI-for-bio research software, and PyPI
-                  libraries with 6,000+ downloads. Here are some highlights.
+                <p className="mx-auto max-w-[720px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Agentic AI oversight layers, LLM-powered developer tools,
+                  genome-scale metabolic modelling, and cognitive-science
+                  experiments — shipped at hackathons (AI Engine Scotland,
+                  Edinburgh BioHackathon) and as open-source Python libraries.
                 </p>
+              </div>
+              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-1 text-sm text-muted-foreground">
+                <div>
+                  <span className="font-semibold text-foreground">
+                    {DATA.projects.length}
+                  </span>{" "}
+                  shipped projects
+                </div>
+                <div aria-hidden className="h-4 w-px bg-border" />
+                <div>
+                  <span className="font-semibold text-foreground">6,000+</span>{" "}
+                  PyPI downloads
+                </div>
+                <div aria-hidden className="h-4 w-px bg-border" />
+                <div>
+                  <span className="font-semibold text-foreground">2</span>{" "}
+                  hackathons
+                </div>
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {projectsToRender.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-              >
-                <ProjectCard
-                  href={project.href}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links}
-                />
-              </BlurFade>
+          <div className="space-y-10 max-w-[800px] mx-auto">
+            {projectGroups.map((group, gi) => (
+              <div key={group.name ?? "all"} className="space-y-4">
+                {group.name && (
+                  <BlurFade
+                    delay={BLUR_FADE_DELAY * (11.5 + gi * 0.15)}
+                  >
+                    <div className="flex items-center gap-3">
+                      <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                        {group.name}
+                      </h3>
+                      <div className="h-px flex-1 bg-border" />
+                      <span className="text-xs text-muted-foreground tabular-nums">
+                        {group.projects.length}
+                      </span>
+                    </div>
+                  </BlurFade>
+                )}
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {group.projects.map((project, id) => (
+                    <BlurFade
+                      key={project.title}
+                      delay={BLUR_FADE_DELAY * (12 + gi * 0.2) + id * 0.05}
+                    >
+                      <ProjectCard
+                        href={project.href}
+                        title={project.title}
+                        description={project.description}
+                        dates={project.dates}
+                        tags={project.technologies}
+                        image={project.image}
+                        video={project.video}
+                        links={project.links}
+                      />
+                    </BlurFade>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -216,9 +273,8 @@ export default async function Page() {
                   I like building things
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve competed in several hackathons — building everything
-                  from AR bedtime story apps for children to campus event
-                  platforms. Fast constraints, real teams, and shipped products.
+                  Fast constraints, real teams, shipped products. Recent
+                  hackathons where I&apos;ve built things from scratch.
                 </p>
               </div>
             </div>
