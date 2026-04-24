@@ -140,6 +140,8 @@ export const DATA = {
   projects: [
     {
       title: "circuit breaker",
+      category: "Agentic AI",
+      featured: true,
       href: "https://github.com/mammadovziya/circuit-breaker",
       dates: "2026",
       active: true,
@@ -158,6 +160,8 @@ export const DATA = {
     },
     {
       title: "gemiz",
+      category: "AI for Bio",
+      featured: true,
       href: "https://github.com/mammadovziya/gemiz",
       dates: "2026",
       active: true,
@@ -183,6 +187,8 @@ export const DATA = {
     },
     {
       title: "mcpforge",
+      category: "Agentic AI",
+      featured: false,
       href: "https://github.com/mammadovziya/mcpforge",
       dates: "2026",
       active: true,
@@ -201,6 +207,8 @@ export const DATA = {
     },
     {
       title: "myco-optima",
+      category: "AI for Bio",
+      featured: false,
       href: "https://github.com/mammadovziya/myco-optima",
       dates: "2026",
       active: true,
@@ -225,6 +233,8 @@ export const DATA = {
     },
     {
       title: "deathlog",
+      category: "Developer Tools",
+      featured: false,
       href: "https://github.com/mammadovziya/deathlog",
       dates: "2025",
       active: true,
@@ -243,6 +253,8 @@ export const DATA = {
     },
     {
       title: "cognicart",
+      category: "Cognitive Science & HCI",
+      featured: false,
       href: "https://github.com/mammadovziya/cognicart",
       dates: "2026",
       active: true,
@@ -261,6 +273,8 @@ export const DATA = {
     },
     {
       title: "Open-Source Python Libraries",
+      category: "Open Source",
+      featured: true,
       href: "https://pypi.org/user/mammadovziya/",
       dates: "2022 – Present",
       active: true,
@@ -285,7 +299,7 @@ export const DATA = {
       location: "Scotland, UK",
       description:
         "Built two projects during the event: circuit breaker, a real-time oversight layer that risk-scores AI finance agent actions before execution; and mcpforge, an automation tool that generates MCP servers from any repo URL.",
-      image: "",
+      image: "/ai-engine.svg",
       links: [],
     },
     {
@@ -294,37 +308,7 @@ export const DATA = {
       location: "Edinburgh, UK",
       description:
         "Pacifico Biolabs track. Built myco-optima, a GEM-powered fungal fermentation optimisation tool covering four filamentous fungi, with FBA/FVA-driven media design and morphology prediction for meat-substitute applications.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "FLL",
-      dates: "2021, 2022",
-      location: "Baku, Azerbaijan",
-      description:
-        "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
-      image:
-        "https://fll.steam.edu.az/front_assets/img/logo_1.svg",
-      links: [],
-    },
-    {
-      title: "SAF 2022",
-      dates: "December 2022",
-      location: "Baku, Azerbaijan",
-      description:
-        "Developed a mobile application which delivers university campus-wide events in real time to all students.",
-      image:
-        "https://kaspiliseyi.edu.az/uploads/63970856a7000fb6d876e09207e48b15dc7011e674c6e.png",
-      links: [],
-    },
-    {
-      title: "Makerthon",
-      dates: "February 22, 2022",
-      location: "Baku, Azerbaijan",
-      description:
-        "Developed a mock of Windows 11 with interesting notifications and functionality.",
-      image:
-        "https://steam.edu.az/storage/slider_widget/nMUtp5hXRvdAaSwqIr0Synh1mSVEnlhmR1YQXm28.svg",
+      image: "/biohackathon.svg",
       links: [],
     },
   ],
